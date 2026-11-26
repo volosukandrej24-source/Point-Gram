@@ -1,22 +1,5 @@
 plugins {
-    `kotlin-dsl`
-}
-repositories {
-    google()
-    mavenCentral()
-}
-
-dependencies {
-    implementation(libs.kgp)
-    implementation(libs.agp)
-}
-
-kotlin {
-    compilerOptions {
-        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
-    }
-}
-
-kotlin {
-    jvmToolchain(17)
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.kotlin.compose) apply false
 }
